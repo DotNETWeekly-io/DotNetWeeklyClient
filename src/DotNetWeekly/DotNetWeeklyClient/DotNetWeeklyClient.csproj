@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>DotNetWeeklyClient</ApplicationTitle>
+		<ApplicationTitle>.NET Weekly</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.dotnetweeklyclient</ApplicationId>
+		<ApplicationId>org.dotnetweekly.dotnetweeklyclient</ApplicationId>
 		<ApplicationIdGuid>239C5505-6010-4A89-A7F0-9D05D0CB3971</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -46,6 +46,27 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
+	  <PackageReference Include="Markdig" Version="0.30.2" />
+	  <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.29.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="EpisodePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
