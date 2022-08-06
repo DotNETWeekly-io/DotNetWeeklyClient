@@ -5,9 +5,8 @@
              xmlns:viewmodel="clr-namespace:DotNetWeeklyClient.ViewModels"
              xmlns:model="clr-namespace:DotNetWeeklyClient.Models"
              x:DataType="viewmodel:MainViewModel">
-    <Grid RowDefinitions="100, *"
-          Padding="5"
-          RowSpacing="5">
+
+    <VerticalStackLayout Spacing="30">
         <Label 
             Text=".NET 周刊"
             FontSize="30"
@@ -44,11 +43,11 @@
                                     HorizontalTextAlignment="Center"/>
                             </Grid>
                         </Frame>
-                       
-                        
+
+
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

@@ -21,6 +21,7 @@ namespace DotNetWeeklyClient.ViewModels
         public async Task Init()
         {
             var summaries = await this.episodeService.GetEpisodeSummaries(default);
+            summaries = summaries.Where(p => !string.IsNullOrWhiteSpace(p.id)).OrderByDescending(p => int.Parse(p.id));
             this.EpisodeSummaries = new ObservableCollection<EpisodeSummary>(summaries);
         }
 
